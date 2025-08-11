@@ -57,18 +57,28 @@ bool checkarrayShorted(vector<int> &nums)
     }
     return false;
 }
+// Remove Duplicate from sorted array
+int removeDuplicat(vector<int> &nums)
+{
+    int i = 0;
+    int n = nums.size();
+    for (int j = 1; j < n; j++)
+    {
+        if (nums[i] != nums[j])
+        {
+            i++;
+            nums[i] = nums[j];
+        }
+    }
+    return i + 1;
+}
+
 int main()
 {
-    vector<int> nums = {
-        1,
-        2,
-        3,
-        4,
-        5,
-    };
+    vector<int> nums = {1, 1, 2};
     // cout << largestElement(nums) << endl;
     // cout << secondLargest(nums) << endl;
-    cout << checkarrayShorted(nums) << endl;
-
+    // cout << checkarrayShorted(nums) << endl;
+    cout << removeDuplicat(nums) << endl;
     return 0;
 }
