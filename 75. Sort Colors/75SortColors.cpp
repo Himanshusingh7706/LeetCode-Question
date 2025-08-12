@@ -34,6 +34,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        cout << i << "";
+        cout << arr[i] << " "; // Corrected to print array elements
     }
+    return 0;
 }
